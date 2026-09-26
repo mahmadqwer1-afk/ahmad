@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="نموذج بيانات وساطة بيع الحسابات الرقمية لمتجر حبس" />
+    <title>متجر حبس | نموذج بيانات الوساطة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="brand-title">
+        <div class="hero-pattern"></div>
+        <div class="brand-lockup">
+          <p class="brand-kicker">منصة وساطة رقمية</p>
+          <h1 id="brand-title">متجر حبس</h1>
+          <p class="brand-subtitle">وسيط حسابات الألعاب والتواصل الاجتماعي</p>
+          <div class="brand-meta">
+            <span>سجل تجاري: 891140163</span>
+            <span>خدمة رقمية مستقلة</span>
+          </div>
+        </div>
+        <div class="ministry-card">
+          <img src="WhatsApp Image 2026-09-26 at 2.47.45 PM.jpeg" alt="شعار وزارة التجارة السعودية" />
+          <small>الشعار مقدم من مالك الموقع للاستخدام في منطقة الهوية فقط</small>
+        </div>
+      </section>
+
+      <section class="form-card" aria-labelledby="form-title">
+        <header class="form-intro">
+          <div>
+            <span class="eyebrow">خطوة واحدة لإعداد المستند</span>
+            <h2 id="form-title">نموذج بيانات الوساطة <span aria-hidden="true">📋</span></h2>
+            <p>أدخل البيانات بدقة. ستبقى البيانات داخل المتصفح حتى تختار طباعة أو حفظ المستند.</p>
+          </div>
+          <div class="progress-badge" aria-label="نموذج متجاوب مع الهاتف">RTL <span>•</span> A4</div>
+        </header>
+
+        <div class="notice" role="note">
+          <span class="notice-icon" aria-hidden="true">ⓘ</span>
+          <p>هذا النموذج واجهة أولية لإنشاء مستند وساطة قابل للطباعة. لا يتم إرسال البيانات إلى خادم في هذه النسخة.</p>
+        </div>
+
+        <form id="brokerage-form">
+          <section class="form-section">
+            <div class="section-title"><span>🎮</span><h3>معلومات الحساب</h3></div>
+            <div class="field">
+              <label>نوع الحساب <b>*</b></label>
+              <div class="account-options" role="radiogroup" aria-label="نوع الحساب">
+                <button type="button" class="account-option" data-value="ببجي موبايل"><span>🎯</span>ببجي موبايل</button>
+                <button type="button" class="account-option" data-value="انستقرام"><span>◎</span>انستقرام</button>
+                <button type="button" class="account-option" data-value="سناب شات"><span>👻</span>سناب شات</button>
+                <button type="button" class="account-option" data-value="تيك توك"><span>♪</span>تيك توك</button>
+                <button type="button" class="account-option" data-value="أخرى"><span>＋</span>أخرى</button>
+              </div>
+              <input type="hidden" id="account-type" name="accountType" required />
+              <p class="field-error" data-error-for="account-type"></p>
+            </div>
+            <div class="field">
+              <label for="account-details">تفاصيل الحساب <b>*</b></label>
+              <textarea id="account-details" name="accountDetails" rows="4" required placeholder="اكتب تفاصيل الحساب (اسم المستخدم، المستوى، المحتوى، عدد المتابعين، إلخ...)"></textarea>
+              <p class="field-error" data-error-for="account-details"></p>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <div class="section-title"><span>💰</span><h3>التسعير والوساطة</h3></div>
+            <div class="field-grid three">
+              <div class="field">
+                <label for="account-price">سعر الحساب <b>*</b></label>
+                <div class="money-input"><input id="account-price" name="accountPrice" type="number" min="0" step="0.01" value="0" required /><span>ر.س</span></div>
+              </div>
+              <div class="field">
+                <label for="brokerage-fee">مبلغ الوساطة</label>
+                <div class="money-input"><input id="brokerage-fee" name="brokerageFee" type="number" min="0" step="0.01" value="0" /><span>ر.س</span></div>
+                <small class="hint">اقتراح تلقائي: 5% من السعر</small>
+              </div>
+              <div class="total-box"><span>الإجمالي</span><strong id="total-price">0.00 ر.س</strong></div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <div class="section-title"><span>👤</span><h3>بيانات البائع</h3></div>
+            <div class="field-grid">
+              <div class="field"><label for="seller-name">اسم البائع <b>*</b></label><input id="seller-name" name="sellerName" required placeholder="الاسم الكامل" /></div>
+              <div class="field"><label for="seller-country">البلد</label><input id="seller-country" name="sellerCountry" value="السعودية" /></div>
+              <div class="field"><label for="seller-phone">رقم الجوال <b>*</b></label><input id="seller-phone" name="sellerPhone" type="tel" required placeholder="+966..." /></div>
+              <div class="field"><label for="seller-email">البريد الإلكتروني</label><input id="seller-email" name="sellerEmail" type="email" placeholder="name@example.com" /></div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <div class="section-title"><span>🏦</span><h3>بيانات استلام الأموال</h3></div>
+            <div class="field-grid">
+              <div class="field"><label for="bank-name">اسم البنك</label><input id="bank-name" name="bankName" placeholder="اسم البنك" /></div>
+              <div class="field"><label for="iban">رقم الآيبان</label><input id="iban" name="iban" dir="ltr" placeholder="SA00 0000 0000 0000 0000 0000" /></div>
+              <div class="field"><label for="payout-method">طريقة استلام الأموال <b>*</b></label><select id="payout-method" name="payoutMethod" required><option value="">اختر الطريقة</option><option>تحويل بنكي</option><option>كاش</option><option>STC Pay</option><option>Apple Pay</option><option>أخرى</option></select></div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <div class="section-title"><span>🛒</span><h3>بيانات المشتري</h3></div>
+            <div class="field-grid">
+              <div class="field"><label for="buyer-name">اسم المشتري <b>*</b></label><input id="buyer-name" name="buyerName" required placeholder="الاسم الكامل" /></div>
+              <div class="field"><label for="buyer-contact">رقم الجوال أو المعرّف <b>*</b></label><input id="buyer-contact" name="buyerContact" required placeholder="وسيلة التواصل" /></div>
+              <div class="field"><label for="payment-method">طريقة الدفع <b>*</b></label><select id="payment-method" name="paymentMethod" required><option value="">اختر الطريقة</option><option>تحويل بنكي</option><option>كاش</option><option>STC Pay</option><option>Apple Pay</option><option>أخرى</option></select></div>
+            </div>
+          </section>
+
+          <section class="terms-section">
+            <div class="section-title"><span>⚖️</span><h3>شروط وأحكام عقد البيع</h3></div>
+            <ol>
+              <li>يلتزم البائع بتسليم الحساب المذكور كاملًا وبالمواصفات الموضحة أعلاه.</li>
+              <li>يلتزم المشتري بسداد المبلغ المتفق عليه كاملًا قبل استلام بيانات الحساب.</li>
+              <li>تتولى متجر حبس دور الوسيط خلال عملية البيع وفق البيانات المقدمة من الطرفين.</li>
+              <li>لا يحق للبائع استرداد الحساب بعد اكتمال عملية البيع وتسليم المبلغ.</li>
+              <li>في حال وجود نزاع، يتواصل الطرفان مع متجر حبس للنظر في تفاصيل العملية.</li>
+            </ol>
+            <label class="consent"><input id="consent" type="checkbox" required /><span>أوافق على الشروط وأقر بصحة البيانات المدخلة.</span></label>
+          </section>
+
+          <div class="form-actions">
+            <p id="form-status" class="form-status" role="alert"></p>
+            <button class="primary-button" type="submit">إنشاء مستند الوساطة <span>↗</span></button>
+            <button class="secondary-button" type="reset">مسح البيانات</button>
+          </div>
+        </form>
+      </section>
+      <footer>متجر حبس · وسيط حسابات الألعاب والتواصل الاجتماعي · السجل التجاري: 891140163</footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
